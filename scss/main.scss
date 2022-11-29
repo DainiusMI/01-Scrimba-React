@@ -1,0 +1,18 @@
+* {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+body { 
+
+}
+.projects-container {
+    @include flex(row, flex-start, center);
+    gap: 2rem;
+}

@@ -1,10 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import DigitalCard from './DigitalCard'
 
+import ReactFacts from "./ReactFacts"
+import "../css/main.css"
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <main className='projects-container'> 
+      <ReactFacts />
+      <DigitalCard />
+    </main>
   </React.StrictMode>
 )

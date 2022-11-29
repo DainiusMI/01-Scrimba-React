@@ -1,0 +1,131 @@
+
+$bg:#23252C;
+$card-main-bg:#1A1B21;
+
+$text-occupation:#F3BF99;
+$button-blue:#5093E2;
+$button-grey:#D1D5DB;
+
+$footer-bg:#161619;
+$socials-icon:#918E9B;
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.digital-card {
+    @include flex(column, center, flex-start);
+
+    width: 550px;
+    padding: 44px 0;
+    &>*{
+        width: 317px;
+    }
+
+    background-color: $bg;
+    .card-main {
+        min-height: 399px;
+        padding: 0 34px;
+        background-color: $card-main-bg;
+
+        border-radius: .5rem .5rem 0 0;
+    }
+    .footer {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 0 0 .5rem .5rem;
+        .socials-ul {
+            @include flex(row, center, center);
+            gap: 24px;
+            padding: 20px;
+        }
+        background-color: $footer-bg;
+        i {
+            font-size: 25px;
+            color: $socials-icon;
+        }
+
+    }
+}
+
+.user-info {
+    @include flex(column, center,flex-start);
+
+    margin-bottom: 33px;
+    .avatar {
+        width: 317px;
+        height: 317px;
+
+        background-color: $bg;
+    }
+    .info-name {
+        font-size: 25px;
+        font-weight: 700;
+
+        margin-top: 21px;
+    }
+    .info-occupation {
+        font-size: 13px;
+        color: $text-occupation;
+
+        margin-top: 6px;
+    }
+    .info-site {
+        font-size: 10px;
+        text-decoration: none;
+
+        margin-top: 9px;
+    }
+    .button-row {
+        margin-top: 15px;
+        &>:first-child {
+            background-color: $button-grey;
+        }
+        &>:last-child {
+            background-color: $button-blue;
+        }
+    }
+}
+
+.button-row {
+    @include flex(row, center, center);
+    gap: 17px;
+    &>:first-child {
+        i, p {
+            color: #1E1F26;
+        }
+
+    }
+    button {
+        width: 115px;
+        height: 34px;
+
+        border-radius: 6px;
+        @include flex(row, center, center);
+        gap: 8px;
+    }     
+}
+
+.more {
+    padding-bottom: 24px;
+    .more-heading {
+        font-weight: 700;   
+
+        margin-bottom: 6px;
+    }
+    .more-text {
+        font-size: 10px;
+        font-weight: 400;
+
+        line-height: 15px;
+        vertical-align: center;
+    }
+}

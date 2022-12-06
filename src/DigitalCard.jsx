@@ -1,7 +1,7 @@
 import React from "react";
 import CardMain from "./components/DigitalCard/CardMain";
 import Footer from "./components/DigitalCard/Footer";
-import "../css/DigitalCard.css"
+import "./digital-card.css"
 
 export default function DigitalCard() {
     return (
